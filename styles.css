@@ -1,0 +1,226 @@
+/* Основные стили для плагина Loans Tracker */
+
+.loans-plugin-container {
+	padding: 20px;
+	font-family: var(--font-family);
+}
+
+.loans-overall-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	margin: 20px 0;
+	padding: 15px;
+	background: var(--background-secondary);
+	border-radius: 8px;
+	border: 1px solid var(--background-modifier-border);
+}
+
+.loans-overall-stats div {
+	padding: 10px;
+	background: var(--background-primary);
+	border-radius: 6px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.loan-item {
+	margin: 15px 0;
+	padding: 15px;
+	background: var(--background-secondary);
+	border-radius: 8px;
+	border-left: 4px solid var(--interactive-accent);
+}
+
+.loan-item h3 {
+	margin-top: 0;
+	color: var(--text-normal);
+}
+
+.loan-item p {
+	margin: 5px 0;
+	color: var(--text-muted);
+	font-size: 14px;
+}
+
+.progress-bar {
+	height: 8px;
+	background: var(--background-modifier-border);
+	border-radius: 4px;
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.progress-fill {
+	height: 100%;
+	background: var(--interactive-accent);
+	border-radius: 4px;
+	transition: width 0.3s ease;
+}
+
+.loans-actions {
+	display: flex;
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.loans-actions button {
+	padding: 8px 16px;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.loans-actions button:hover {
+	background: var(--interactive-accent-hover);
+}
+
+/* Формы */
+.loan-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.form-group label {
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--text-normal);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+	padding: 8px 12px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+/* Таблицы */
+.payments-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 15px 0;
+	font-size: 14px;
+}
+
+.payments-table th,
+.payments-table td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.payments-table th {
+	background: var(--background-secondary);
+	font-weight: 600;
+}
+
+.payment-status {
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.payment-status.pending {
+	background: rgba(255, 193, 7, 0.2);
+	color: #ff9800;
+}
+
+.payment-status.paid {
+	background: rgba(76, 175, 80, 0.2);
+	color: #4caf50;
+}
+
+.payment-status.overdue {
+	background: rgba(244, 67, 54, 0.2);
+	color: #f44336;
+}
+
+/* Калькулятор */
+.calculator-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.calculator-inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+.calculator-results {
+	padding: 15px;
+	background: var(--background-secondary);
+	border-radius: 8px;
+}
+
+.calculator-results h4 {
+	margin-top: 0;
+}
+
+.result-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 0;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.result-item:last-child {
+	border-bottom: none;
+}
+
+/* Уведомления */
+.loan-notification {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 15px;
+	background: var(--background-primary);
+	border: 1px solid var(--interactive-accent);
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	max-width: 300px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.form-row,
+	.calculator-inputs {
+		grid-template-columns: 1fr;
+	}
+	
+	.loans-overall-stats {
+		grid-template-columns: 1fr;
+	}
+}

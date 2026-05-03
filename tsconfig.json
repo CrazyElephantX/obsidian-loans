@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"inlineSourceMap": true,
+		"inlineSources": true,
+		"module": "ESNext",
+		"target": "ES6",
+		"allowJs": true,
+		"noImplicitAny": false,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"isolatedModules": true,
+		"lib": [
+			"DOM",
+			"ES2017"
+		],
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"**/*.ts"
+	]
+}

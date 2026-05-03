@@ -1,0 +1,11 @@
+{
+	"id": "obsidian-loans",
+	"name": "Loans Tracker",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Плагин для учета кредитов, платежей и расчета выгодного погашения",
+	"author": "Vladimir Burmistrov",
+	"authorUrl": "https://bv-dev.ru/",
+	"fundingUrl": "https://boosty.to/crazyelephant",
+	"isDesktopOnly": false
+}
